@@ -8,11 +8,11 @@ public class TailsGenerator {
 
     public List<String> tails(String value) {
 
-        ArrayList<String> temp = new ArrayList<>(value.length() + 1);
-
         if (value == null) {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
+
+        ArrayList<String> temp = new ArrayList<>();
         for (int i = 0; i < value.length() + 1; i++) {
             temp.add(value.substring(i));
         }
